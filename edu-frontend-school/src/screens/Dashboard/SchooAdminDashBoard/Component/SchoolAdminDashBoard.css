@@ -1,0 +1,111 @@
+.dashboard-button {
+  background-color: #fff;
+  width: 150px;
+  font-size: 0.8rem;
+  padding: 10px;
+  font-weight: 900;
+}
+
+.active-dashboard-button {
+  background-color: #331b73;
+  width: 150px;
+  font-size: 0.8rem;
+  color: #fff;
+  padding: 10px;
+  font-weight: 900;
+}
+
+.total-students {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.dash-board-left-container {
+  background-color: #fff;
+  height: 300px;
+  border-radius: 10px;
+  padding: 5px;
+  margin-right: 20px;
+}
+
+.dash-board-right-container {
+  background-color: #fff;
+  height: 300px;
+  border-radius: 10px;
+  padding: 10px;
+  overflow: auto;
+}
+
+.dash-board-google-map-container {
+  background-color: #fff;
+  height: 370px;
+  border-radius: 10px;
+  padding: 10px;
+  /* overflow: auto; */
+}
+
+.liveclass-card {
+  overflow: auto;
+  height: 220px;
+  padding: 5px;
+}
+
+.students-count-chart-container {
+  background-color: #fff;
+  height: 300px;
+  border-radius: 10px;
+  overflow: auto;
+  margin-right: 20px;
+}
+
+.p-dropdown {
+  width: 150px;
+}
+
+ul {
+  padding-left: 0px !important;
+}
+
+@media screen and (max-width: 767px) {
+  .dash-board-mobile-tab-view {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+  }
+
+  .dashboard-buttons-container {
+    flex-direction: column !important;
+    align-items: center !important;
+
+    width: 100% !important
+    ;
+  }
+
+  .dashboard-buttons-container > button {
+    margin-top: 20px;
+    width: 80% !important;
+    margin-right: 0px !important;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .dash-board-right-container {
+    margin-right: 0px !important;
+  }
+
+  .dash-board-left-container {
+    margin-right: 0px !important;
+  }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1000px) {
+.dashboardSection{
+  display: block !important;
+}
+.dashboardSection button{
+  margin-top: 1rem;
+
+}
+}

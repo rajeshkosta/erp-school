@@ -1,0 +1,213 @@
+stages:
+  - prebuild
+  - build
+  - configure_changes
+  - deploy
+  - restart_haproxy
+
+variables:
+  CONTAINER_REGISTRY: "registry.digitalocean.com/aieze"
+  MICRO_SERVICES_COMMON: "edu-micro-common"
+  MICRO_SERVICES:
+    value: "edu-micro-admin,edu-micro-auth,edu-micro-user,edu-micro-registration,edu-micro-transport,edu-micro-classroom"
+    description: "List of Micro Services can be deployed"
+  FRONTEND_SERVICES:
+    value: "edu-frontend-school,edu-ssd-frontend-homepage"
+    description: "List of Frontend Services can be deployed"
+  ENVIRONMENT:
+    value: "dev"
+    description: "Environment to deploy services. Possible Values (dev|prod)"
+  DEPLOYMENTS_PROJECT: "gitlab.aieze.in/devops/aieze-deployments.git"
+
+before_script:
+  - |
+    case "${ENVIRONMENT}" in
+      dev)
+        STACK_WEBHOOK="https://portainer.dev.aieze.in:9443/api/stacks/webhooks/63da35b8-db3e-4482-912d-49edd1a9402b"
+        BUILD_ENV="dev"
+        DOCKER_COMPOSE="docker-compose-erp-school.yaml"
+        DEPLOYMENTS_PROJECT_BRANCH="dev_release"
+        HAPROXY_SERVICE_NAME=haproxy_haproxy
+        ;;
+      prod)
+        STACK_WEBHOOK="https://portainer.aieze.in:9443/api/stacks/webhooks/abcef623-7979-4705-878a-94c35e45709a"
+        BUILD_ENV="prod"
+        DOCKER_COMPOSE="docker-compose-edu.yaml"
+        DEPLOYMENTS_PROJECT_BRANCH="prod_release"
+        HAPROXY_SERVICE_NAME=haproxy-reverse-proxy_haproxy
+        ;;
+      *)
+        echo "Invalid environment specified."
+        exit 1
+        ;;
+    esac
+
+prebuild:
+  stage: prebuild
+  tags:
+    - $ENVIRONMENT-deployment
+  only:
+    - web
+  script:
+    - echo $CI_PROJECT_DIR
+    - echo "Cleaning Existing Local Builds"
+    - docker system prune -a --force
+
+build:
+  stage: build
+  tags:
+    - $ENVIRONMENT-deployment
+  only:
+    - web
+  script:
+    - project_dir=$PWD;
+    - |
+
+      IFS=',' read -ra MICRO_SERVICES_ARRAY <<< "$MICRO_SERVICES"
+
+      for service in "${MICRO_SERVICES_ARRAY[@]}"; do
+        echo "Creating Build for Microservice: $service"
+
+        cd $project_dir;
+        cd $service;
+
+        port=$(jq -r '.nodemonConfig.env.PORT' package.json)
+
+        jq --arg port "$port" --arg service "$service" --arg common "$MICRO_SERVICES_COMMON" '
+            .nodemonConfig.env = {
+                "NODE_ENV": "Development",
+                "PORT": ($port | tonumber),
+                "MODULE": $service,
+                "HOST": "localhost"
+        }
+        ' package.json > package-temp.json && mv package-temp.json package.json
+
+        if grep -q "$MICRO_SERVICES_COMMON" "package.json"; then
+             jq --arg common "$MICRO_SERVICES_COMMON" '
+                  .dependencies[$common] = "./\($common)"
+            ' package.json > package-temp.json && mv package-temp.json package.json
+            rm -rf $MICRO_SERVICES_COMMON; cp -a ../$MICRO_SERVICES_COMMON .
+        fi
+
+        image="${CONTAINER_REGISTRY}/${service}:${CI_COMMIT_SHORT_SHA}-${CI_COMMIT_REF_NAME//[_\/]/-}-${ENVIRONMENT}"
+
+        docker build -t "$image" .
+
+        echo "Build created for $service - $image"
+
+        echo "Pushing Image $image"
+
+        docker push $image
+
+        count=$(doctl registry repository list-tags $service | wc -l)
+        
+        if [ $count -gt 5 ]; then
+            
+            tags=$(doctl registry repository list-tags $service | tail -n +7 | awk '{print $8}')
+          
+            if [ -n "$tags" ]; then
+                      
+                echo "Manifests are more than 5 for $service in Container Registry, Deleting Old manifests and making it to 5..."
+
+                doctl registry repository delete-manifest $service $tags -f
+                  
+            fi
+        
+        fi
+
+      done
+
+    - |
+      IFS=',' read -ra FRONTEND_SERVICES_ARRAY <<< "$FRONTEND_SERVICES"
+
+      for service in "${FRONTEND_SERVICES_ARRAY[@]}"; do
+        echo "Creating Build for Frontend Services: $service"
+
+        cd $project_dir;
+        cd $service;
+
+        sed -i "s/npm run build\(:[^ ]*\)\?/npm run build:${BUILD_ENV}/" Dockerfile
+
+        image="${CONTAINER_REGISTRY}/${service}:${CI_COMMIT_SHORT_SHA}-${CI_COMMIT_REF_NAME//[_\/]/-}-${ENVIRONMENT}"
+
+        docker build -t "$image" .
+
+        echo "Build created for $service - $image"
+
+        echo "Pushing Image $image"
+
+        docker push $image
+
+        count=$(doctl registry repository list-tags $service | wc -l)
+        
+        if [ $count -gt 5 ]; then
+            
+            tags=$(doctl registry repository list-tags $service | tail -n +7 | awk '{print $8}')
+          
+            if [ -n "$tags" ]; then
+                      
+                echo "Manifests are more than 5 for $service in Container Registry, Deleting Old manifests and making it to 5..."
+
+                doctl registry repository delete-manifest $service $tags -f
+                  
+            fi
+        
+        fi
+
+      done
+
+configure_changes:
+  stage: configure_changes
+  tags:
+    - $ENVIRONMENT-deployment
+  only:
+    - web
+  script:
+    - |
+      echo "Cloning Deployment Repository"
+
+      git clone --single-branch https://${GITLAB_USERNAME}:${GITLAB_ACCESS_TOKEN}@${DEPLOYMENTS_PROJECT} --branch "$DEPLOYMENTS_PROJECT_BRANCH" 
+
+      IFS=',' read -ra SERVICES_ARRAY <<< "$([ -n "$MICRO_SERVICES" ] && [ -n "$FRONTEND_SERVICES" ] && echo "$MICRO_SERVICES," || echo "$MICRO_SERVICES")$FRONTEND_SERVICES"
+
+      cd aieze-deployments;
+
+      git pull;
+
+      commited_services="$([ -n "$MICRO_SERVICES" ] && [ -n "$FRONTEND_SERVICES" ] && echo "$MICRO_SERVICES," || echo "$MICRO_SERVICES")$FRONTEND_SERVICES"
+
+      for service in "${SERVICES_ARRAY[@]}"; do
+
+          image="${CONTAINER_REGISTRY}/${service}:${CI_COMMIT_SHORT_SHA}-${CI_COMMIT_REF_NAME//[_\/]/-}-${ENVIRONMENT}"
+          
+          echo "Updating Image ${image} for ${service}"
+          
+          sed -i "/^[[:space:]]${service}:/,/^[^[:space:]]/ s|\(${CONTAINER_REGISTRY}/${service}:\).\$|${image}|g" docker-compose/$DOCKER_COMPOSE
+
+      done
+
+      git add "docker-compose/${DOCKER_COMPOSE}"
+          
+      git commit -m "Deploying Services ${commited_services} for $CI_COMMIT_MESSAGE"
+                    
+      git push origin "$DEPLOYMENTS_PROJECT_BRANCH"
+
+deploy:
+  stage: deploy
+  tags:
+    - $ENVIRONMENT-deployment
+  only:
+    - web
+  script:
+    - echo "Triggering Deployment"
+    - curl -X POST --insecure $STACK_WEBHOOK
+
+restart_haproxy:
+  stage: restart_haproxy
+  tags:
+    - $ENVIRONMENT-deployment
+  only:
+    - web
+  script:
+    - echo "Restarting HAProxy"
+    - docker service update --force $HAPROXY_SERVICE_NAME

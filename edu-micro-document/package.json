@@ -1,0 +1,45 @@
+{
+  "name": "edu-micro-document",
+  "version": "1.0.0",
+  "description": "EDU Document Service",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js",
+    "prod": "node app.js"
+  },
+  "author": "Mr Robot",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "edu-micro-common": "../edu-micro-common",
+    "ejs": "^3.1.8",
+    "express": "^4.17.1",
+    "express-sanitize-middleware": "^1.0.3",
+    "helmet": "^3.22.0",
+    "nodemon": "^3.0.3",
+    "puppeteer": "^20.3.0",
+    "winston": "^3.3.3"
+  },
+  "nodemonConfig": {
+    "restartable": "rs",
+    "ignore": [
+      "node_modules/**/node_modules"
+    ],
+    "delay": "2000",
+    "env": {
+      "NODE_ENV": "Development",
+      "PORT": 9207,
+      "HOST": "localhost",
+      "MODULE": "edu-micro-document",
+      "EDU_MASTER_HOST": "localhost",
+      "EDU_MASTER_PORT": "5432",
+      "EDU_MASTER_DATABASE": "edu",
+      "EDU_MASTER_USER": "postgres",
+      "EDU_MASTER_PASSWORD": "password",
+      "EDU_REDIS_HOST": "localhost",
+      "EDU_REDIS_PORT": 6379,
+      "EDU_S3_BUCKET": "edu-dev"
+    }
+  }
+}

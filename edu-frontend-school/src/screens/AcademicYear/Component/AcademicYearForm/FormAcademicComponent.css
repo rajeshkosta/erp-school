@@ -1,0 +1,48 @@
+.add-organization-container {
+  min-height: 500px;
+  border-radius: 10px;
+  margin-top: 20px;
+  background-color: #fff;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 50px;
+}
+
+.upload-logo {
+  border-radius: 0;
+  border: 1px solid grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 70px;
+  background-color: rgb(241, 241, 241);
+  margin-right: 20px;
+  padding: 5px;
+}
+
+.upload-image-container {
+  display: flex;
+}
+
+.upload-image-container > input {
+  display: none !important;
+}
+
+.upload-image-container > label {
+  color: #331b73;
+}
+
+.uploaded-image {
+  width: 100%;
+  /* height: 100%; */
+  /* border-radius: 50%; */
+  object-fit: none;
+}
+
+@media screen and (max-width: 425px) {
+  .add-organization-container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}

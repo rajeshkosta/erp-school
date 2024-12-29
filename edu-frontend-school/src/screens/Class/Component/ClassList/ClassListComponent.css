@@ -1,0 +1,32 @@
+/* .classRoomManagementSection .form-group {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 50%;
+} */
+
+/* .classRoomManagementSection .add-button {
+    width: 50%;
+    height: 3.2rem;
+} */
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    .classRoomManagementSection{
+        /* display: block !important; */
+        text-align: center;
+
+        .classRoomManagementSection span{
+            display: block !important;
+          }
+       
+    }
+    /* .classRoomManagementSection .form-group {
+        width: 100%;
+        display: block;
+        margin-top: 10px;
+    } */
+    .classRoomManagementSection .add-button {
+        width: 100%;
+        margin-top: 10px;
+    }
+}

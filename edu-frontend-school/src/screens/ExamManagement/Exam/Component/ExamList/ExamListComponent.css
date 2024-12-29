@@ -1,0 +1,11 @@
+
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    .examinationSection{
+      display: block !important;
+      text-align: center;
+    }
+    .examinationSection span{
+      display: block !important;
+    }
+    }

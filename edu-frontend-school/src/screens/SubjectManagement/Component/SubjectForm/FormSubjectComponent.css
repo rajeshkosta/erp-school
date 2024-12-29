@@ -1,0 +1,53 @@
+.add-more-button {
+  background-color: #fcebea;
+  color: #db3525;
+  margin-left: 20px;
+}
+
+.subject-list-container > div {
+  border: 1px solid grey;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: rgb(242, 242, 242);
+  border-radius: 10px;
+}
+
+.delete-icon {
+  cursor: pointer;
+}
+
+.delete-icon:hover {
+  color: red;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.wordBreak {
+  word-break: break-all;
+  width: 80%;
+}
+
+.subject-name {
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.subject-name:hover {
+  transform: scale(0.9);
+}
+
+.subject-list-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: rgb(247, 247, 247);
+  border-radius: 10px;
+}

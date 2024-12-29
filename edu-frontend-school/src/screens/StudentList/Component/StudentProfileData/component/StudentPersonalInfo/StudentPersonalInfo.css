@@ -1,0 +1,47 @@
+.container {
+  display: flex;
+  align-items: center;
+  padding-top: 1.5rem;
+}
+
+.admission-date {
+  /* margin-right: 10px;  */
+  font-size: 14px;
+}
+
+.personal_details {
+  margin-left: auto;
+  font-style: bold;
+}
+
+.scroll-container {
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.scroll-container::-webkit-scrollbar {
+  width: 10px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.studentInfo {
+  width: 100%;
+  padding-left: 2rem;
+}
+.infoSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.7rem;
+}
+.studentProfilePic {
+  padding-right: 1.5rem;
+}

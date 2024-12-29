@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <style>
+        .custom-table-bordered th,
+        .custom-table-bordered td {
+            border: 1px solid #000000;
+        }
+    </style>
+</head>
+
+<body style="font-family: 'Poppins', sans-serif;background-image: url('https://swasthyautsav.assam.gov.in/assets/images/Score%20card%20BG.svg');background-repeat: no-repeat;background-size: cover;background-position: center center;display: flex;
+    justify-content: center;">
+
+    <div class="inside-content" style="padding: 6rem 0rem 9rem 0rem;">
+        <table class="table">
+            <tr id="logo-table">
+                <td class="border-0" style="padding-left: 2rem;"><img
+                        src="https://swasthyautsav.assam.gov.in/assets/images/Swasthya_Sewa_Utsav_Logo_Hi-PNG.png"
+                        alt="" class="pt-1" style="height:4rem; width:5rem;"></td>
+                <td class="border-0" style="text-align: end;padding-left: 2rem;">
+                    <img src="https://swasthyautsav.assam.gov.in/assets/images/emblem.jpeg" alt="" class="logo_one"
+                        style="height:4rem; width:5rem" />
+                </td>
+                <td class="border-0" style="text-align: end;padding-right: 2rem;">
+                    <img src="https://swasthyautsav.assam.gov.in/assets/images/undp_logo.svg" alt=""
+                        class="logo_four pt-1" style="height:4rem; width:5rem" />
+                    <img src="https://swasthyautsav.assam.gov.in/assets/images/nhm.jpg" alt="" class="logo_two pt-1"
+                        style="height:4rem; width:5rem" />
+                </td>
+            </tr>
+        </table>
+
+        <span class="text-center">
+            <h5>GOVERNMENT OF ASSAM<br>HEALTH & FAMILY WELFARE DEPARTMENT</h5>
+        </span>
+
+
+        <div class="d-flex justify-content-center border border-dark p-2 mt-3">
+            <span style="font-weight: bold;">SWASTHY SEWA UTSAV 2023 - FACILITY REPORT CARD</span>
+        </div>
+
+        <table class="table">
+            <tr>
+                <td style="padding-left: 12rem;" class="border-0">Facility Name: <%= facilityName %></td>
+                <td style="padding-right: 10rem;" class="border-0">Block: Jalah BPHC</td>
+            </tr>
+            <tr>
+                <td style="padding-left: 12rem;" class="border-0">Facility Type: PHC</td>
+                <td style="padding-right: 10rem;" class="border-0">Disrict: Baksa</td>
+            </tr>
+            <tr>
+                <td style="padding-left: 12rem;" class="border-0">Facility Sub Type: 24*7 PHC</td>
+            </tr>
+        </table>
+
+        <div class="d-flex justify-content-center border border-dark p-2">
+            <span style="font-weight: bold;">SECTION WISE FACILITY SCORE</span>
+        </div>
+
+        <table class="table text-center custom-table-bordered">
+            <tr>
+                <td>Accountibility</td>
+                <td>Diagonostics</td>
+                <td>Drugs</td>
+                <td>HR</td>
+                <td>Infrastructure</td>
+                <td>Medical Equipment</td>
+                <td>Monitoring & Certification</td>
+                <td>Quality</td>
+                <td>Services</td>
+            </tr>
+            <tr>
+                <td>92/122</td>
+                <td>20/76</td>
+                <td>12/22</td>
+                <td>22/44</td>
+                <td>232/306</td>
+                <td>30/32</td>
+                <td>18/34</td>
+                <td>16/26</td>
+                <td>379/580</td>
+            </tr>
+        </table>
+
+        <table class="table">
+            <tr class="d-flex flex-column" style="padding-left: 40rem;">
+                <td class="border-0">Total Score: 825/1242</td>
+                <td class="border-0">% of Score: 66.43</td>
+                <td class="border-0">Grade: B</td>
+                <td class="border-0">Survey Type: Internal Assessor</td>
+            </tr>
+        </table>
+
+        <table class="table text-center custom-table-bordered">
+            <tr>
+                <td>Score in %</td>
+                <td>70% and above</td>
+                <td>50% - 69%</td>
+                <td>Below 50%</td>
+            </tr>
+            <tr>
+                <td>Grade</td>
+                <td>A</td>
+                <td>B</td>
+                <td>C</td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

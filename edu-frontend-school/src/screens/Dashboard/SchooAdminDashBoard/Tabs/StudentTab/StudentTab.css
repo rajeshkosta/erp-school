@@ -1,0 +1,50 @@
+@media screen and (max-width: 467px) {
+  .mobile-dash-board-attendance-dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+  }
+
+  .mobile-dropdown {
+    margin-right: 0px !important;
+    width: 150px !important;
+    margin-top: 15px;
+  }
+
+  .mobile-dash-board-right-container-attendance {
+    height: auto !important;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .mobile-dash-board-attendance {
+    flex-direction: column;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .total-students > div {
+    margin-bottom: 20px !important;
+  }
+
+  .counting {
+    font-size: 17px !important;
+  }
+
+  .counting-label {
+    font-size: 15px !important;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 967px) {
+  .counting {
+    font-size: 17px !important;
+  }
+
+  .counting-label {
+    font-size: 15px !important;
+  }
+}

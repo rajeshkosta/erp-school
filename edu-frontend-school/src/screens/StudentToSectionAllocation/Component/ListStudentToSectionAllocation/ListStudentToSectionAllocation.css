@@ -1,0 +1,243 @@
+/* @media only screen and (min-width: 320px) and (max-width: 767px) {
+  .divisionSection {
+    display: block !important;
+    text-align: center;
+    justify-content: space-between;
+    padding-top: 15px;
+  }
+
+  .divisionSection span {
+    display: block !important;
+  }
+} */
+
+.classRoomManagementSection .form-group {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 50%;
+}
+
+.classRoomManagementSection .add-button {
+  width: 50%;
+  height: 3.2rem;
+}
+
+.allocation-sub {
+  color: #aaa !important;
+  font-weight: 700;
+  font-size: 0.8rem !important;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .classRoomManagementSection {
+    display: block !important;
+    text-align: center;
+
+    .classRoomManagementSection span {
+      display: block !important;
+    }
+  }
+
+  .classRoomManagementSection .form-group {
+    width: 100%;
+    display: block;
+    margin-top: 10px;
+  }
+
+  .classRoomManagementSection .add-button {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+.searchSelect {
+  width: 100%;
+  border: 1px solid #d3d3d3;
+  height: 3.2rem;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.searchSelect .btn-secondary {
+  height: 3.2rem;
+  background: transparent;
+  border: 0;
+  color: #000;
+}
+
+.searchSelect .form-control {
+  background: transparent;
+  border: 0px solid transparent !important;
+  padding-left: 0 !important;
+  box-shadow: 0 0 0 0 rgb(13 110 253 / 0%) !important;
+}
+
+.search-box-container {
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.labels {
+  color: grey;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* .add-button {
+  color: #fff;
+  height: 3.2rem;
+  position: relative;
+  top: 9px;
+} */
+.searchBtn {
+  color: #fff;
+  height: 3.2rem;
+  margin: auto;
+  display: table;
+  margin-right: 0;
+}
+
+.p-picklist-source-controls,
+.p-picklist-target-controls {
+  display: none;
+}
+
+.divisionSectionMain .p-button {
+  background: #db3525 !important;
+  color: #fff !important;
+  border: 0px solid transparent !important;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.checkedSection {
+  accent-color: #db3525;
+}
+
+.checkedSection[checked] > label {
+  background: #f00 !important;
+}
+
+.userItemSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.userInfoSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.userInfoSection img {
+  width: 50px;
+  height: 50px;
+}
+
+.userInfoSection h1 {
+  margin: 0;
+  color: #000;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.userInfoSection p {
+  margin: 0;
+  color: #3c3c3c;
+  font-size: 1rem;
+}
+
+.userInfoSection h6 {
+  margin: 0;
+  color: #000;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.p-picklist .p-picklist-list {
+  padding: 0;
+}
+
+.p-picklist .p-picklist-list .p-picklist-item {
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.p-picklist .p-picklist-list .p-picklist-item.p-highlight {
+  background: #f8c2bd;
+}
+
+.checkedSection {
+  width: auto !important;
+}
+
+.mantine-Tabs-tab {
+  border: 0px solid transparent !important;
+}
+
+.mantine-Tabs-tab[aria-selected="true"] {
+  background: #db3525;
+  border: 0px solid transparent !important;
+  color: #fff;
+}
+
+.mantine-Tabs-list::before {
+  border: 0px solid transparent !important;
+}
+
+.checkedSection {
+  opacity: 0;
+}
+
+.checkedSection ~ label {
+  /* background: #f9f9f9; */
+  padding: 1rem;
+  border-radius: 5px;
+  width: 15rem;
+  text-align: center;
+}
+
+.checkedSection[type="radio"]:checked ~ label {
+  background-color: #db3525;
+  color: #fff;
+}
+
+.curserPointer {
+  cursor: pointer;
+}
+
+.alignmentPosition {
+  position: relative;
+  left: -15px;
+}
+
+/* .tabsSection{
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding: 10px;
+  padding-top: 0;
+  width: fit-content;
+    margin: auto;
+    margin-right: 0;
+} */
+.tabsSection {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .tabsSection {
+    margin-top: 1rem;
+  }
+  .divisionSection h1 {
+    margin-bottom: 1rem !important;
+  }
+  .searchSection h1 {
+    margin-bottom: 1rem !important;
+    text-align: center;
+  }
+}

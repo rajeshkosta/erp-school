@@ -1,0 +1,51 @@
+.fee-master-main-contatiner {
+  height: 430px;
+  overflow-y: auto;
+}
+
+.fee-master-main-contatiner::-webkit-scrollbar-thumb {
+  background-color: rgb(129, 144, 242);
+  outline: 1px solid rgb(179, 176, 176);
+  border-radius: 5px;
+}
+
+.fee-master-main-contatiner::-webkit-scrollbar {
+  width: 3px;
+}
+
+.fee-list-container {
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 15px;
+  box-shadow: 1px 1px 2px 2px rgb(235, 235, 235);
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.fee-list-container > span {
+  color: #db3525;
+}
+
+.fee-list-container > p {
+  color: #000;
+  font-weight: 800;
+  font-size: 25px;
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
+.no-data {
+  width: 250px;
+  height: 250px;
+}
+
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .feeMaster{
+    display: block !important;
+    text-align: center;
+  }
+  .feeMaster span{
+    display: block !important;
+  }
+  }

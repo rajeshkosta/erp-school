@@ -1,0 +1,26 @@
+.container-Background {
+    background-image: url("../../../../../public/Assets/Registration_form.png"); /* Replace with the actual path to your image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    //  height: 340px;
+  }
+  
+  // .container {
+  //   margin-top: 88px;
+  // }
+
+  
+  .reg-header h1{
+    color: white;
+    font-size: 60px;
+    padding: 10rem;
+    text-align: center;
+    font-weight: 700;
+  
+  @media only screen and (min-width: 320px) and (max-width: 767px) {
+  font-size: 32px;
+  padding: 5rem;
+  font-weight: 500;
+  }
+}

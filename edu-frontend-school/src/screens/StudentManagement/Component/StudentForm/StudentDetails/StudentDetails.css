@@ -1,0 +1,104 @@
+.student-details {
+  border: 1px solid rgb(248, 164, 164);
+  border-radius: 10px;
+  position: relative;
+}
+
+.student-details-label {
+  position: absolute;
+  top: -20px;
+  font-size: 25px;
+  background: #fff;
+  z-index: 1;
+  font-weight: 800;
+  color: grey;
+}
+
+.change-index {
+  z-index: -1 !important;
+  position: absolute;
+  top: -20px;
+  font-size: 25px;
+  background: #fff;
+  font-weight: 800;
+  color: grey;
+}
+
+.student-details-sub-container {
+  /* height: 500px; */
+  overflow-y: auto;
+}
+
+.student-details-sub-container::-webkit-scrollbar-thumb {
+  background-color: rgb(180, 189, 248);
+  outline: 1px solid rgb(179, 176, 176);
+  border-radius: 5px;
+}
+
+.student-details-sub-container::-webkit-scrollbar {
+  width: 2px;
+}
+
+.student-registration-container {
+  width: 100% !important;
+}
+
+.upload-documents {
+  display: flex;
+  align-items: center;
+  border: 1px dashed grey;
+  background-color: rgb(247, 247, 247);
+  border-radius: 10px;
+  padding: 15px;
+  /* cursor: pointer; */
+}
+
+.student-upload-logo {
+  border-radius: 50%;
+  border: 1px solid grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  background-color: rgb(241, 241, 241);
+  margin-right: 20px;
+  position: relative;
+  padding: 5px;
+}
+
+.student-uploaded-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  /* object-fit: none; */
+ 
+}
+
+@media screen and (max-width: 420px) {
+  .student-upload-logo {
+    margin-right: 0px;
+  }
+
+  .fees-types-checkbox-container {
+    display: flex;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .student-details {
+    padding-left: 10px !important;
+    padding-right: 0px !important;
+  }
+
+  .checkbox-amount {
+    width: 100px !important;
+  }
+}
+
+.pop-up-image {
+  width: 250px;
+  height: 250px;
+}

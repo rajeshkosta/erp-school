@@ -1,0 +1,8 @@
+@media screen and (max-width: 400px) {
+  .mobile-dash-board-earning-container {
+    display: flex;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+  }
+}

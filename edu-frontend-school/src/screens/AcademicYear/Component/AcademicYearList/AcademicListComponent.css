@@ -1,0 +1,66 @@
+.add-button {
+  background-color: #db3525;
+}
+
+.subject-list-container-section {
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 1rem;
+  /* 
+  flex-direction: column;
+  align-items: start; */
+  min-height: 280px;
+  max-height: 280px;
+  border: #db3525 1px solid;
+}
+
+/* @media only screen and (min-width: 320px) and (max-width: 767px) {
+  .academicYearSection{
+      display: block !important;
+      text-align: center;
+  }
+  .academicYearSection span{
+    display: block !important;
+  }
+  } */
+
+  .academic_year_img {
+    margin: auto;
+    display: table;
+    border: #db3525 1px solid;
+    border-radius: 50px;
+}
+
+.academic_year_img img {
+  width: 80px;
+  height: 80px;
+}
+.academic-details h1{
+  font-size: 20px;
+  color: #000;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.dateSection{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.dateSection p{
+  font-size: 14px;
+  margin: 0;
+  color: #000;
+}
+.yearInfo{
+  color: #db3525;
+}
+.btnEdit{
+  background-color: #db3525;
+  margin: auto;
+  display: table;
+  color: #fff;
+  font-size: 16px;
+  margin-top: 2rem;
+}

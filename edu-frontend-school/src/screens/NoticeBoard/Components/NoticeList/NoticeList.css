@@ -1,0 +1,7 @@
+.notice-list-container {
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 15px;
+  box-shadow: 1px 1px 2px 2px rgb(235, 235, 235);
+  margin-top: 20px;
+}

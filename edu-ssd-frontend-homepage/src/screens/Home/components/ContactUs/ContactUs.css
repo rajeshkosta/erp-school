@@ -1,0 +1,29 @@
+.container-background {
+  background-image: url("../../../../../public/images/contactUs-banner.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#contact_us .container {
+  margin-top: 88px;
+}
+
+.messageinputBox {
+  height: 65px;
+  color: white;
+}
+
+.nameinputBox,
+.emailinputBox,
+.mobileInputBox {
+  height: 80px;
+  color: white;
+}
+
+.contactUs h1 {
+  padding-bottom: 75px;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 700;
+}

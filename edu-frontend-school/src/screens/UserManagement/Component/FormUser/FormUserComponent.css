@@ -1,0 +1,61 @@
+/* .p-calendar.p-component.p-inputwrapper {
+  width: 100%;
+  height: 3.2rem;
+  border: 1px solid #ddd;
+}
+
+.p-inputtext {
+  border: 0 !important;
+}
+
+.p-inputtext:focus-visible {
+  outline: none;
+}
+
+.p-datepicker-trigger.p-button.p-component.p-button-icon-only {
+  border: 0;
+  background-color: transparent;
+}
+
+.p-datepicker.p-component.p-ripple-disabled {
+  background-color: #fff !important;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.p-datepicker-prev,
+.p-datepicker-next {
+  border: none;
+  background-color: transparent;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+}
+
+.p-link {
+  padding: 0.5rem;
+}
+
+.p-link:hover,
+.p-datepicker-calendar > tbody > tr > td > span:hover {
+  color: red;
+}
+
+.p-datepicker-calendar > thead > tr > th {
+  background-color: rgba(255, 0, 0, 0.085) !important;
+}
+
+.p-yearpicker-year,
+.p-monthpicker-month {
+  padding: 0.5rem 0rem;
+} */
+
+.p-calendar.p-component {
+  width: 100%;
+}
+
+.normalSelect {
+  width: 100% !important; 
+  border: 1px solid #d3d3d3;
+  height: 3.2rem;
+  border-radius: 5px;
+  padding-left: 5px;
+}

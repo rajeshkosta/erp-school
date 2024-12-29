@@ -1,0 +1,34 @@
+.add-more-button {
+  background-color: #fcebea;
+  color: #db3525;
+  margin-left: 20px;
+}
+
+.section-list-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: rgb(247, 247, 247);
+  border-radius: 10px;
+}
+
+.section-list-main-container {
+  overflow-y: auto;
+  max-height: 328px;
+}
+
+.delete-icon {
+  cursor: pointer;
+}
+
+.delete-icon:hover {
+  color: red;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}

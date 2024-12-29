@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fees receipt</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: "Montserrat", sans-serif;
+        }
+
+        table {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="width: auto; margin: auto; background-color: #fffdee; padding: 0 10px;">
+        <table style="background-color: #331B73; width: 100%; border-radius: 0 0 50% 50%; padding: 40px 0;">
+            <tbody>
+                <tr>
+                    <td style="width: 50%; text-align: right; padding-right: 10px; "><img src="<%= logo_url %>"
+                            style="width: 70px; height: 70px; " /></td>
+                    <td style="width: 50%; color: #fff; padding-left: 10px; ">
+                        <h6 style="font-size: 16px; color: #fff; font-weight: 600; margin: 0; margin-bottom: 5px;">
+                            <%= school_name %></h6>
+                        <p style="font-size: 14px; color: #fff; font-weight: 500; margin: 0; margin-bottom: 6px;">
+                            <%= address %></p>
+                        <p style="font-size: 14px; color: #fff; font-weight: 500; margin: 0;">Ph. <%= contact_no %></p>
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>
+
+        <table style="width: 100%; padding: 50px 0; ">
+            <tbody>
+                <tr>
+                    <td style="width: 50%; text-align: center; color: #000; font-size: 26px; font-weight: 600; ">Fees
+                        receipt</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table style="width: 100%; padding: 20px 0;">
+            <thead>
+                <tr>
+                    <th style="font-size: 15px; color: #000; font-weight: 400; text-align: left; width: 33.3%;">Student
+                        name</th>
+                    <th style="font-size: 15px; color: #000; font-weight: 400; text-align: left; width: 33.3%; ">Class &
+                        sec</th>
+                    <th style="font-size: 15px; color: #000; font-weight: 400; text-align: left; width: 33.3%;">Roll no.
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="font-size: 18px; color: #000; font-weight: 600; text-align: left; width: 33.3%;">Sanjeev
+                        kumar</td>
+                    <td style="font-size: 18px; color: #000; font-weight: 600; text-align: left; width: 33.3%;">2nd (A)
+                    </td>
+                    <td style="font-size: 18px; color: #000; font-weight: 600; text-align: left; width: 33.3%;">20</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table style="width: 100%; padding: 20px 0;">
+            <thead>
+                <tr>
+                    <th style="font-size: 15px; color: #000; font-weight: 400; text-align: left; width: 33.3%;">Receipt
+                        no.</th>
+                    <th style="font-size: 15px; color: #000; font-weight: 400; text-align: left; width: 33.3%; ">Payment
+                        mode</th>
+                    <th style="font-size: 15px; color: #000; font-weight: 400; text-align: left; width: 33.3%;">Date
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="font-size: 18px; color: #000; font-weight: 600; text-align: left; width: 33.3%;">
+                        32342942342</td>
+                    <td style="font-size: 18px; color: #000; font-weight: 600; text-align: left; width: 33.3%;">Cash
+                    </td>
+                    <td style="font-size: 18px; color: #000; font-weight: 600; text-align: left; width: 33.3%;">12 Jan,
+                        2023</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table style="width: 100%; padding: 20px 0;">
+            <thead>
+                <tr>
+                    <th style="font-size: 15px; color: #000; font-weight: 400; text-align: left; width: 33.3%;">Fees
+                        details</th>
+
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td
+                        style="font-size: 26px; color: #000; font-weight: 300; text-align: left; width: 50%; padding: 20px 0;">
+                        Tution fees</td>
+                    <td
+                        style="font-size: 26px; color: #000; font-weight: 300; text-align: right; width: 50%; padding: 20px 0;">
+                        1200</td>
+
+                </tr>
+
+                <tr>
+                    <td
+                        style="font-size: 26px; color: #000; font-weight: 300; text-align: left; width: 50%; padding: 20px 0;padding-top: 0;">
+                        Discount</td>
+                    <td
+                        style="font-size: 26px; color: #000; font-weight: 300; text-align: right; width: 50%; padding: 20px 0; padding-top: 0;">
+                        -100</td>
+
+                </tr>
+            </tbody>
+        </table>
+
+        <table style="width: 100%;">
+            <tbody style="border-bottom: 2px solid #E7E6E9; display: block;">
+
+            </tbody>
+        </table>
+
+        <table style="width: 100%; padding: 20px 0;">
+
+            <tbody>
+                <tr>
+                    <td
+                        style="font-size: 26px; color: #000; font-weight: 700; text-align: left; width: 50%; padding: 20px 0;">
+                        Paid amount</td>
+                    <td
+                        style="font-size: 26px; color: #000; font-weight: 700; text-align: right; width: 50%; padding: 20px 0;">
+                        1100</td>
+
+                </tr>
+
+
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+</html>

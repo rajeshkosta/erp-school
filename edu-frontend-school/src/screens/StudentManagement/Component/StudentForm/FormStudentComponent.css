@@ -1,0 +1,44 @@
+.m-cbb57068[data-icon-position="left"] {
+  --_step-direction: column !important;
+}
+
+[data-mantine-color-scheme] .m-1959ad01[data-completed] {
+  --_step-icon-color: var(--stepper-icon-color, var(--mantine-color-white));
+  --_step-icon-bg: #f68277;
+  --_step-icon-border-color: #f68277;
+}
+
+[data-mantine-color-scheme] .m-1959ad01[data-progress] {
+  --_step-icon-border-color: #f68277;
+}
+
+.m-2a371ac9[data-active] {
+  --_separator-bg: #f68277;
+}
+
+.m-12051f6c {
+  margin-top: 10px;
+}
+
+.m-4081bf90 {
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.m-aaf89d0b[data-orientation="horizontal"] {
+  --_steps-direction: row;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 1000px) {
+.mantine-Stepper-steps{
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    flex-wrap: nowrap !important;
+    overflow: auto;
+    height: 100px;
+
+}
+
+}

@@ -1,0 +1,41 @@
+.edit-button {
+  background-color: #e5e5e5;
+  border: none;
+}
+
+.upload-profile-pic {
+  border: 1px solid grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  background-color: rgb(241, 241, 241);
+  margin-right: 20px;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+.uploaded-profile-pic {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: fill;
+}
+
+.uploadIconProfile {
+  background: #db3525;
+  position: absolute;
+  border-radius: 50px;
+  padding: 5px;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+}
+
+.update-number {
+  font-size: smaller;
+  text-decoration: underline;
+  cursor: pointer;
+  color: #db3525;
+}

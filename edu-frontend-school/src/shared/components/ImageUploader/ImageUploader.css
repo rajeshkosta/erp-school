@@ -1,0 +1,239 @@
+.dialog-box {
+  /* position: absolute;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 1px 1px 15px 4px rgb(173, 171, 171);
+  width: 30%;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  line-height: 15px;
+  z-index: 10;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 60vh; */
+}
+
+.close-button-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
+}
+
+.dialog-box>div>h5 {
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.dialog-box>div>p {
+  margin-bottom: 20px;
+}
+
+.cancel-button {
+  background-color: rgb(227, 181, 189);
+  color: palevioletred;
+  border-radius: 5px;
+  padding: 10px;
+  border: none;
+  margin-right: 30px;
+}
+
+.reset-button {
+  background-color: transparent;
+  border: none;
+  border-radius: 5px;
+  padding: 7px;
+  color: blueviolet;
+  font-size: 12px;
+  text-decoration: underline;
+}
+
+.minutes-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.minutes-container>p {
+  margin-top: 10px;
+}
+
+.main-language-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.language {
+  width: 100%;
+  height: 30px;
+  outline: none;
+  padding: 5px;
+}
+
+.language-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.error {
+  font-size: 12px;
+  color: red;
+  margin-top: 10px;
+}
+
+.input-show-password {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* @media screen and (max-width: 767px) {
+  .dialog-box {
+    width: 85%;
+  }
+
+  .dialog-box {
+    margin-top: 20%;
+  }
+} */
+
+.zoom-controls {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 50%;
+  transform: translateX(-50%);
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.rotation-controls {
+  position: absolute;
+  bottom: 1;
+  left: 50%;
+  width: 50%;
+  transform: translateX(-50%);
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.slider {
+  padding: 22px 0px;
+}
+
+.reactEasyCrop_Container {
+  overflow: visible !important;
+  height: 210px;
+}
+
+.uploadFile {
+  border: 2px dotted #000;
+  padding: 1rem;
+  border-radius: 10px;
+  position: relative;
+  height: 25vh;
+  width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .uploadFile {
+    width: 100%;
+  }
+}
+
+.uploadInput {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+}
+
+.uploadProfileInfo img {
+  width: 30px;
+  margin-bottom: 1rem;
+}
+
+.uploadProfileInfo p {
+  font-size: 15px;
+  color: #000;
+  margin: 0;
+
+}
+
+.header-button {
+  background: #db3525;
+  color: #fff;
+  padding: 0.8rem 1rem;
+  font-size: 16px;
+  border: 0px solid transparent;
+  border-radius: 5px;
+}
+
+.imageText {
+  font-size: 13px;
+  color: #000;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-align: left;
+  line-height: normal;
+}
+
+.cropped-preview-container {
+  width: 300px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cropper-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cropper {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.modal-title {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.uploadImgBtns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.cancelBtn {
+  background: transparent !important;
+  border: 1px solid #db3525;
+  color: #db3525;
+}

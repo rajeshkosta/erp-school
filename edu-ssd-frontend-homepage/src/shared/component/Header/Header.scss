@@ -1,0 +1,99 @@
+.navbar {
+    padding: 16px;
+  }
+  .nav-logo{
+     gap: 10px;
+  }
+  .nav-logo p{
+      color:#000000;
+      font-size: 24px;
+      font-weight: 700;
+      margin: 0;
+      margin-bottom: 10px;
+  }
+  
+  .nav-menu {
+    list-style: none;
+    gap: 3rem;
+    color: #000000;
+    font-size: 20px;
+    font-weight: 500;
+    }
+  .nav-menu li  {
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    // justify-content: center;
+    // gap: 3px;
+    cursor: pointer;
+  }
+  
+  .nav-menu li a {
+    color: #000000;
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  
+  .school-login{
+      gap:45px;
+  }
+  
+  .registerationBtn{
+      width:160px;
+      height: 44px;
+      outline:none;
+      border:1px solid #DB3525;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 500;
+      color:#DB3525;
+      background:#FCEBEA;
+      cursor: pointer;
+  }
+  .loginBtn{
+      width:106px;
+      height: 44px;
+      outline:none;
+      border:1px solid #DB3525;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 500;
+      color:#F3F2F4;
+      cursor: pointer;
+  }
+
+  .mobileView{
+    display: none !important;
+  }
+
+  .navbar-collapse{
+    justify-content: center;
+  }
+  .headerSection{
+    background: #fff;
+  }
+
+  @media only screen and (min-width: 320px) and (max-width: 767px) {
+    .mobileView{
+      display: flex !important;
+      gap: 10px;
+      margin-top: 1rem;
+    }
+    .desktopView{
+      display: none !important;
+    }
+    .navbar-toggler{
+      background: #DB3525;
+    }
+    .nav-logo p{
+      display: block;
+      font-size: 14px;
+    }
+    .nav-menu{
+      gap: 1rem;
+      align-items: start !important;
+    }
+  }
+
+  

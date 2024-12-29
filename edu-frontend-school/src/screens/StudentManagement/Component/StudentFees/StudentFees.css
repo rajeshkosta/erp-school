@@ -1,0 +1,124 @@
+.student_fee-profile-container {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 1px 3px 3px 3px rgb(233, 233, 233);
+}
+
+.label-name {
+  font-size: 12px;
+  color: grey;
+  font-weight: 600;
+}
+
+.label-data {
+  font-size: 14px;
+  color: rgb(66, 75, 201);
+  font-weight: 900;
+}
+
+.student-fees-bottom-container {
+  border-radius: 10px;
+  border: 1px solid #db3525;
+  position: relative;
+  /* height: 190px; */
+}
+
+.fees-details-label {
+  position: absolute;
+  top: -14px;
+  font-size: 17px;
+  left: 30px;
+  font-weight: bold;
+  color: blue;
+  background-color: #f5f3f8;
+}
+
+.fees-history-label {
+  color: #db3525;
+}
+
+.confirmation-container {
+  border: 1px solid blue;
+  padding: 1.5rem;
+}
+
+/* .extra {
+  overflow-y: auto;
+  height: 160px;
+} */
+
+.fees-history-main-container {
+  height: 300px;
+  padding: 15px;
+  overflow-y: auto;
+}
+
+.extra::-webkit-scrollbar-thumb {
+  background-color: rgb(233, 165, 97);
+  outline: 1px solid rgb(179, 176, 176);
+  border-radius: 5px;
+}
+
+.extra::-webkit-scrollbar {
+  width: 3px;
+}
+
+.fees-history-main-container::-webkit-scrollbar-thumb {
+  background-color: rgb(129, 144, 242);
+  outline: 1px solid rgb(179, 176, 176);
+  border-radius: 5px;
+}
+
+.fees-history-main-container::-webkit-scrollbar {
+  width: 3px;
+}
+
+.fees-details-button {
+  background-color: #331b73;
+  color: #fff !important;
+  font-size: 13px !important;
+  margin-right: 15px !important;
+}
+
+.fees-history-button {
+  background-color: #db3525;
+  font-size: 13px !important;
+  border: 1px solid #db3525;
+  color: #fff;
+  /* margin-right: 15px !important; */
+}
+
+@media screen and (max-width: 967px) {
+  .profile-pic-container {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.noDataSection {
+  flex-direction: column;
+}
+.editIconInfo {
+  width: 20px;
+}
+
+.configuration {
+  background: #db3525 !important;
+}
+
+.feeSectionInfo {
+  
+}
+.feeTypeSection span {
+  padding-bottom: 1rem;
+}
+
+.paySection span {
+  padding-top: 1rem;
+}
+
+.mantine-Modal-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #db3525;
+}

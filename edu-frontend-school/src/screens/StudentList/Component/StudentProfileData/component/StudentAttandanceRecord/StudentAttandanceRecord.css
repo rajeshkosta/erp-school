@@ -1,0 +1,214 @@
+.attendance-total {
+  background: #f3f2f4;
+  padding: 25px;
+  justify-content: space-between;
+}
+
+.counting-label {
+  font-size: 10px !important;
+}
+
+.attendance-months {
+  max-height: 300px;
+  overflow: auto;
+}
+
+.attendance-months th {
+  position: sticky;
+  top: 0;
+}
+.para-label {
+  color: green;
+}
+
+.para-label-absent {
+  color: red;
+}
+.para-label-late {
+  color: #db7c25;
+}
+
+.para-label-holiday {
+  color: #2558db;
+}
+
+.para-label-hd {
+  color: #db7c25;
+}
+
+@media only screen and (min-width: 767px) and (max-width: 1440px) {
+  .label-counting {
+    font-size: 1rem;
+  }
+}
+
+.attendance-list-section {
+  text-align: center;
+  justify-content: center;
+}
+
+.month-tab {
+  .mantine-Tabs-list {
+    overflow: auto;
+    flex-wrap: nowrap;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+
+    &::-webkit-scrollbar {
+      width: 8px; /* Set the width of the scrollbar */
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: white; /* Set the color of the scrollbar thumb */
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: transparent; /* Set the color of the scrollbar track */
+    }
+  }
+}
+
+.month-tab .mantine-Tabs-tab {
+  padding: 1rem 1.5rem;
+  font-size: 18px;
+}
+.month-section {
+  padding: 1.5rem;
+  border: 1px solid #f3f2f4;
+  border-radius: 0px 8px 8px 8px;
+}
+
+.monthly-record {
+  display: flex;
+  align-items: center;
+}
+.monthly-record h1 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-right: 2rem;
+}
+.present {
+  color: #13934e !important;
+  background-color:#BEFFDC !important;
+  ;
+}
+.absent {
+  color: #db3525 !important;
+  background-color: #fcd3d1 !important;
+}
+.halfday {
+  color: #db7c25 !important;
+  background-color: #ffdab8 !important
+  ;
+}
+.holiday {
+  color: #2558db !important;
+  background-color: #d0ddff !important
+  ;
+}
+.calendar-section ul {
+  display: flex;
+  align-items: center;
+
+  flex-wrap: wrap;
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+.calendar-section ul li {
+  flex: 0 0 auto;
+    /* width: 13%; */
+    /* margin-top: 2rem; */
+    /* margin-right: 4.7rem; */
+    width: 115px;
+    /* margin: auto; */
+    /* display: table; */
+    margin-top: 2rem;
+    /* margin-right: 4.7rem; */
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.calendar-section ul li:nth-child(7), .calendar-section ul li:nth-child(14),.calendar-section ul li:nth-child(21),.calendar-section ul li:nth-child(28){
+  margin-right: 0;
+}
+.calendar-section ul li span {
+  width: 50px;
+  height: 50px;
+  background-color: #eee;
+  border-radius: 100px;
+  color: #222;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Add these styles to your CSS file or style block */
+.calendar-section {
+  max-height: 300px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: white transparent; 
+
+
+  &::-webkit-scrollbar-thumb {
+    background-color: white; /* Set the color of the scrollbar thumb */
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent; /* Set the color of the scrollbar track */
+  }
+}
+
+.calendar-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.present-section{
+  color: #13934e
+}
+
+.absent-section{
+  color: #db3525 
+}
+
+.halfday-section{
+  color: #db7c25
+}
+
+.holiday-section{
+  color: #2558db
+}
+
+@media only screen and (min-width: 200px) and (max-width: 767px) {
+ 
+  .monthly-record {
+    display: block;
+   
+  }
+  .calendar-section ul li{
+    margin-right: 1rem !important;
+  }
+  .mobile-view-center {
+    justify-content: center;
+  }
+  .add-organization-container{
+    padding: 10px !important ;
+
+  }
+  .mobile-view-margin{
+    margin-top: 0 !important;
+  }
+  }
+
+  
+@media only screen and (min-width: 1500px) and (max-width: 600px) {
+ 
+  .calendar-section ul li {
+    width: 101px;
+  }
+  }

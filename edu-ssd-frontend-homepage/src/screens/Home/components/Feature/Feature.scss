@@ -1,0 +1,122 @@
+.cardThree,
+.cardOne,
+.cardTwo,
+.cardFour,
+.cardFive,
+.cardSix,
+.cardSeven,
+.cardEight,
+.cardNine {
+    border-radius: 20px;
+    background-color: #F2F4F5;
+  
+    padding: 2rem;
+    transition: all 0.8s ease-in-out;
+    min-height: 450px;
+    max-height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 2rem;
+  
+    @media only screen and (min-width: 320px) and (max-width: 767px) {
+      min-height: auto;
+      max-height: inherit;
+    }
+  
+    @media only screen and (min-width: 768px) and (max-width: 1000px) {
+      padding: 1rem;
+      font-size: 16px;
+    }
+  
+    @media only screen and (min-width: 1000px) and (max-width: 1100px) {
+      min-height: 600px;
+      max-height: 600px;
+    }
+  
+    @media only screen and (min-width: 1000px) and (max-width: 1600px) {
+      font-size: 14px;
+  
+    }
+  
+    img {
+      transition: all 0.8s ease-in-out;
+      // border-radius: 5px;
+      width: 150px;
+      height: 150px;
+      padding: 1.5rem;
+      // border: 4px solid #fff0;
+      margin: auto;
+      display: table;
+  
+      // margin-bottom: 1rem;
+      @media only screen and (min-width: 768px) and (max-width: 1000px) {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
+
+.container-fluid-features{
+  background: linear-gradient(180deg, #EBE9F1 0%, rgba(235, 233, 241, 0) 100%)
+}
+
+  .add-button {
+    background-color: #db3525;
+  }
+  
+  .card-container-section {
+    border-radius: 40px;
+    background-color: whitesmoke;
+    padding: 1rem;
+    /* 
+    flex-direction: column;
+    align-items: start; */
+    min-height: 280px;
+    max-height: 280px;
+   
+  }
+  
+  // @media only screen and (min-width: 320px) and (max-width: 767px) {
+  //   .academicYearSection{
+  //       display: block !important;
+  //       text-align: center;
+  //   }
+  //   .academicYearSection span{
+  //     display: block !important;
+  //   }
+  //   }
+  
+    .academic_year_img {
+      margin: auto;
+      display: table;
+      border: #db3525 1px solid;
+      border-radius: 50px;
+  }
+  
+  .academic_year_img img {
+    width: 80px;
+    height: 80px;
+  }
+  .card-details h1{
+    font-size: 20px;
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .yearInfo{
+    color: black;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 39.01px;
+    text-align: center;
+  }
+ 
+  .contentpara{
+    padding-top: 12px;
+    text-align: center;
+  }

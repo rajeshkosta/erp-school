@@ -1,0 +1,115 @@
+.facultyDashboard h1 {
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #000;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.cardFlex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: auto;
+    flex-direction: row;
+    margin-bottom: 1.5rem;
+}
+
+.cardFlex h2 {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #000;
+
+}
+
+.cardFlex p {
+    font-size: 15px;
+    font-weight: 200;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #554F64;
+    margin-bottom: 0;
+
+}
+
+.cardFlex img {
+    width: 100px;
+    height: 100px;
+}
+
+.classTeacherCard {
+    background-color: #DB3525;
+    border-radius: 10px;
+    padding-bottom: 20px;
+    text-align: center;
+    min-height: 305px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    background-image: url(../../../../../public/Assets/cardbodyBg.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.classTeacherCard h3 {
+    background-image: url(../../../../../public/Assets/headingBg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 1.5rem 0;
+    color: #fff;
+    font-size: 18px;
+    width: 100%;
+    background-position: bottom;
+    font-weight: 600;
+
+}
+
+.classTeacherCard h4 {
+    font-size: 18px;
+    margin: 0;
+    color: #fff;
+    font-weight: 600;
+
+}
+
+.headingFlex h2 {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #000;
+}
+
+.classLable {
+    color: #000;
+    background: #F3F2F4;
+    padding: 5px 10px;
+    font-size: 15px;
+    font-weight: 200;
+    border-radius: 5px;
+}
+
+.cardHeight {
+    min-height: 320px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1000px) {
+    .cardFlex img {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 1100px) {
+.classTeacherCard{
+    min-height: 245px;
+    background-size: cover;
+}
+
+}

@@ -1,0 +1,24 @@
+.routeDriverSection{
+    background-image: url(../../../../../../public/Assets/routeInfoBg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #71609d;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.routeDriverSection label{
+    color: #fff !important;
+
+}
+
+.add-organization-container{
+    padding: 30px !important;
+    padding-right: 40px !important;
+}
+
+.uploaded-vehicle-image {
+    height: 100% !important;
+    width: 100%;
+    object-fit: none;
+}

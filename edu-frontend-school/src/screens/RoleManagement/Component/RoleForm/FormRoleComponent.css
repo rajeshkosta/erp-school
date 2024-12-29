@@ -1,0 +1,32 @@
+.menus-list-container {
+  height: 341px;
+  overflow-y: auto;
+  padding: 25px 10px;
+  border: 1px solid rgb(248, 164, 164);
+  border-radius: 5px;
+  position: relative;
+}
+
+.menu-label {
+  position: absolute;
+  top: -15px;
+  z-index: 1;
+  background-color: #fff;
+  padding: 0 10px;
+  font-weight: 800;
+  font-size: 25px;
+}
+
+.menus-list-container::-webkit-scrollbar-thumb {
+  background-color: rgb(183, 190, 236);
+  outline: 1px solid rgb(179, 176, 176);
+  border-radius: 5px;
+}
+
+.menus-list-container::-webkit-scrollbar {
+  width: 5px;
+}
+
+.meunu-list-div {
+  border: 1px solid rgb(114, 112, 112);
+}

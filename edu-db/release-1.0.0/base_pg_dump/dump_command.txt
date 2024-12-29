@@ -1,0 +1,5 @@
+Restore
+    psql -U postgres -d edu < edu.sql
+
+Dump
+    pg_dump -U postgres -d edu > edu.sql 
